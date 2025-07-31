@@ -59,12 +59,12 @@ def scan_blocks(chain, start_block, end_block, contract_address, eventfile='depo
         for evt in events:
             row = {
                 'chain': chain,
-                'token': evt.args['tokens'],
+                'token': evt.args['token'],
                 'recipient': evt.args['recipient'],
                 'amount': evt.args['amount'],
                 'transactionHash': evt.transactionHash.hex(),
                 'address': evt.address,
-                'date': datetime.utcnow().strftime("%m/%d/%/Y %H:%M:%S")
+                'date': datetime.utcnow().strftime("%m/%d/%Y %H:%M:%S")
             }
             rows.append(row)
 
@@ -84,12 +84,12 @@ def scan_blocks(chain, start_block, end_block, contract_address, eventfile='depo
             for evt in events:
                 row = {
                     'chain': chain,
-                    'token': evt.args['tokens'],
+                    'token': evt.args['token'],
                     'recipient': evt.args['recipient'],
                     'amount': evt.args['amount'],
                     'transactionHash': evt.transactionHash.hex(),
                     'address': evt.address,
-                    'date': datetime.utcnow().strftime("%m/%d/%/Y %H:%M:%S")
+                    'date': datetime.utcnow().strftime("%m/%d/%Y %H:%M:%S")
                 }
                 rows.append(row)
 
